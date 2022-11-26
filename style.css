@@ -1,0 +1,75 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+nav{
+    margin: 40px;
+}
+nav ul{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+}
+
+nav li{
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.active_nav{
+    height: 2px;
+    background: blueviolet;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.section{
+    margin: 100px auto;
+    max-width: 1200px;
+}
+.cardlist{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+}
+.card{
+    border: 4px solid #000;
+    background: #01935b;
+    color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 2px 0px #000;
+    cursor: pointer;
+    grid-column: span 3;
+    border-radius: 10px;
+}
+
+h2{
+    padding-bottom: 10px;
+    text-align: center;
+}
+.card.active h2{
+    border-bottom: 2px solid #dddddd;
+    text-align: left;
+}
+.card p{
+    display: none;
+}
+
+.card.active p{
+    display: block;
+}
+
+.card.active{
+    grid-column: 1 / span 6;
+    grid-row:  1;
+    order: 0;
+    height: auto;
+}
+
+.card.is-inactive{
+    grid-column: span 2;
+}
